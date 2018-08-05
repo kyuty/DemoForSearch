@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+ 
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name><!-- 开发人员自定义的任意名称-->
+        <servlet-class>com.lx.servlet.HelloServlet</servlet-class><!-- 开发人员写的servlet类，要包含包名-->
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name><!-- 这个名称要和上面第一个一致 -->
+        <url-pattern>/hello</url-pattern><!-- url的访问资源，这个一定要有 -->
+    </servlet-mapping>
+     
+    <servlet>
+        <servlet-name>SearchListServlet</servlet-name>
+        <servlet-class>com.lx.servlet.SearchListServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>SearchListServlet</servlet-name>
+        <url-pattern>/listSearch</url-pattern>
+    </servlet-mapping>
+    
+    <!--
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.lx.servlet.SearchServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+     -->
+    
+    <servlet>
+        <servlet-name>SearchServlet2</servlet-name>
+        <servlet-class>com.lx.servlet.SearchServlet2</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>SearchServlet2</servlet-name>
+        <url-pattern>/search_page</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>servlet.RegistServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <servlet-class>servlet.VerifyCodeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/RegistServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <url-pattern>/VerifyCedeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+	  <welcome-file>search_page.jsp</welcome-file>
+	</welcome-file-list>
+    
+</web-app>
